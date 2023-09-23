@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Counter from './components/Counter';
+import LCH from './components/FunctionalLifeCycle';
+import Debounce from './components/Debounce';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    num: 0
+  }
+  incrementNumber() {
+    this.setState((state) => ({ num: state.num + 1 }));
+  }
+
+
+  render() {
+    return <>
+      <button onClick={this.incrementNumber.bind(this)}>Increment</button>
+      <div className='boxModel'>
+        Box Model contain margin, padding, width, border
+      </div>
+
+      <Counter number={this.state.num} />
+      <LCH number={this.state.num} />
+      <Debounce />
+      
+    </>
+  }
 }
 
 export default App;
