@@ -1,0 +1,8 @@
+.counterObj {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+    flex-direction: row;
+}

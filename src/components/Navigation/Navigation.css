@@ -1,0 +1,29 @@
+.App-header {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.App-header li {
+    position: relative;
+}
+
+.App-header li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.App-header li:hover ul {
+    display: block;
+}
+
+.active {
+    background-color: #f2f2f2;
+}
